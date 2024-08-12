@@ -55,4 +55,8 @@ if (PermissionManager.isPermissionGranted(this, Manifest.permission.CAMERA)) {
 }
 ```
 
+<img src="https://github.com/user-attachments/assets/691d946a-55c5-49f4-8d47-c1af2774e5b5" width="400" height="400" />
+
+<img src="https://github.com/user-attachments/assets/f26d8290-d147-45bc-a0fa-2391bf2cf4b6" width="400" height="400" />
+
 
