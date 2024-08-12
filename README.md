@@ -13,10 +13,11 @@ PermissionManager is an Android library that helps manage permissions in a simpl
 
 Add the following dependency to your `build.gradle` file:
 
-```gradle
+```gradle -->
 dependencies {
     implementation 'com.example.permissionmanager:permissionmanager:1.0.0'
 }
+
 ```
 
 ## Usage
@@ -54,6 +55,4 @@ if (PermissionManager.isPermissionGranted(this, Manifest.permission.CAMERA)) {
 }
 ```
 
-## License
 
-PermissionManager is licensed under the MIT License. See [LICENSE](LICENSE) for more information.
