@@ -8,7 +8,7 @@
     tools:context=".MainActivity">
 
     <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/textView_libraryPermissions"
+        android:id="@+id/textView_lib_Permissions"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Check Permissions Library"
@@ -29,7 +29,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:text="Check Camera Permission"
-        app:layout_constraintTop_toBottomOf="@id/textView_libraryPermissions"
+        app:layout_constraintTop_toBottomOf="@id/textView_lib_Permissions"
         android:layout_centerHorizontal="true"
         android:fontFamily="@font/font"
         android:textStyle="bold"
@@ -176,20 +176,5 @@
         android:layout_marginTop="16dp"/>
 
 
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/textView_result"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Permission Check Results"
-        app:layout_constraintTop_toBottomOf="@id/button_sensors"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp"
-        android:layout_centerHorizontal="true"
-        android:fontFamily="@font/font"
-        android:textStyle="bold"
-        android:background="@drawable/button_style"
-        android:textColor="@color/black"
-        android:textSize="16sp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

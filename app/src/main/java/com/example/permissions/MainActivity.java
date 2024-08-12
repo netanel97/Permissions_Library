@@ -18,7 +18,6 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     private PermissionManager permissionManager;
-    private MaterialTextView textViewResult;
     private MaterialButton buttonCamera;
     private MaterialButton buttonStorage;
     private MaterialButton buttonLocation;
@@ -49,7 +48,6 @@ public class MainActivity extends AppCompatActivity {
         buttonSms = findViewById(R.id.button_sms);
         buttonCalendar = findViewById(R.id.button_calendar);
         buttonSensors = findViewById(R.id.button_sensors);
-        textViewResult = findViewById(R.id.textView_result);
     }
 
     private void initViews() {
@@ -238,7 +236,6 @@ public class MainActivity extends AppCompatActivity {
 
 
     private void updateResult(String result) {
-        textViewResult.setText(result);
         Toast.makeText(MainActivity.this, result, Toast.LENGTH_SHORT).show();
 
     }

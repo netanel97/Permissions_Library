@@ -9,8 +9,11 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Environment;
 import android.provider.Settings;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AlertDialog;
@@ -172,9 +175,27 @@ public class PermissionManager {
                     callback.onPermissionsDenied(Collections.singletonList(permission));
                     dialog.dismiss();
                 });
+
         AlertDialog alertDialog = builder.create();
         alertDialog.show();
 
+        // Get the buttons
+        Button positiveButton = alertDialog.getButton(AlertDialog.BUTTON_POSITIVE);
+        Button negativeButton = alertDialog.getButton(AlertDialog.BUTTON_NEGATIVE);
+
+        // Center the buttons and add margin
+        LinearLayout.LayoutParams positiveParams = (LinearLayout.LayoutParams) positiveButton.getLayoutParams();
+        positiveParams.weight = 1;
+        positiveParams.gravity = Gravity.CENTER;
+        positiveParams.leftMargin = 16; // Add margin between buttons
+
+        LinearLayout.LayoutParams negativeParams = (LinearLayout.LayoutParams) negativeButton.getLayoutParams();
+        negativeParams.weight = 1;
+        negativeParams.gravity = Gravity.CENTER;
+        negativeParams.rightMargin = 16; // Add margin between buttons
+
+        positiveButton.setLayoutParams(positiveParams);
+        negativeButton.setLayoutParams(negativeParams);
         alertDialog.getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(ContextCompat.getColor(activity, R.color.darkGreen));
         alertDialog.getButton(AlertDialog.BUTTON_POSITIVE).setBackgroundColor(ContextCompat.getColor(activity, R.color.cream));
         alertDialog.getButton(AlertDialog.BUTTON_NEGATIVE).setTextColor(ContextCompat.getColor(activity, R.color.darkGreen));
