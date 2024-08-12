@@ -139,11 +139,10 @@ public class PermissionManager {
             if (grantResults[i] != PackageManager.PERMISSION_GRANTED) {
                 if (!ActivityCompat.shouldShowRequestPermissionRationale((Activity) context, permissions[i])) {
                     showManualPermissionAlert(permissions[i], callback);
-                    return;
                 } else {
                     callback.onPermissionsDenied(Collections.singletonList(permissions[i]));
-                    return;
                 }
+                return;
             }
         }
         callback.onPermissionsGranted();
@@ -176,7 +175,6 @@ public class PermissionManager {
         AlertDialog alertDialog = builder.create();
         alertDialog.show();
 
-        // Apply the custom background color to buttons after showing the dialog
         alertDialog.getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(ContextCompat.getColor(activity, R.color.darkGreen));
         alertDialog.getButton(AlertDialog.BUTTON_POSITIVE).setBackgroundColor(ContextCompat.getColor(activity, R.color.cream));
         alertDialog.getButton(AlertDialog.BUTTON_NEGATIVE).setTextColor(ContextCompat.getColor(activity, R.color.darkGreen));

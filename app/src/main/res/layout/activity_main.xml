@@ -174,22 +174,7 @@
         app:backgroundTint="@color/cream"
         android:textSize="12sp"
         android:layout_marginTop="16dp"/>
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/button_Foreground_service"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:text="Check Foreground Permission"
-        app:layout_constraintTop_toBottomOf="@id/button_calendar"
-        android:layout_centerHorizontal="true"
-        android:fontFamily="@font/font"
-        android:textStyle="bold"
-        android:background="@drawable/button_style"
-        android:textColor="@color/black"
-        app:backgroundTint="@color/cream"
-        android:textSize="12sp"
-        android:layout_marginTop="16dp"/>
+
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/textView_result"

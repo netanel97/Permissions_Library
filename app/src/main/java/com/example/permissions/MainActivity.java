@@ -22,7 +22,6 @@ public class MainActivity extends AppCompatActivity {
     private MaterialButton buttonCamera;
     private MaterialButton buttonStorage;
     private MaterialButton buttonLocation;
-    private MaterialButton button_Foreground_service;
     private MaterialButton buttonContacts;
     private MaterialButton buttonAudio;
     private MaterialButton buttonPhone;
@@ -35,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         permissionManager = PermissionManager.getInstance();
-        permissionManager.init(this); // Initialize with context
+        permissionManager.init(this);
         findViews();
         initViews();
     }
@@ -51,7 +50,6 @@ public class MainActivity extends AppCompatActivity {
         buttonCalendar = findViewById(R.id.button_calendar);
         buttonSensors = findViewById(R.id.button_sensors);
         textViewResult = findViewById(R.id.textView_result);
-        button_Foreground_service = findViewById(R.id.button_Foreground_service);
     }
 
     private void initViews() {
@@ -73,12 +71,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }));
 
-        button_Foreground_service.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
 
-            }
-        });
         buttonStorage.setOnClickListener(v -> permissionManager.checkStoragePermission(new PermissionManager.PermissionCallback() {
             @Override
             public void onPermissionsGranted() {
